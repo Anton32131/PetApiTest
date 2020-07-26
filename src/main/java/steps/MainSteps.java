@@ -62,13 +62,14 @@ public class MainSteps {
                 .then().log().body().statusCode(HttpStatus.SC_INTERNAL_SERVER_ERROR);
     }
 
-    @Step("выполняется проверка выполнения запроса без параметра")
+    @Step("выполняется проверка запроса без параметра")
     public void checkRequestNoParameter() {
         given().pathParam("id", "")
                 .when().get(endpoint + "/{id}")
                 .then().log().body().assertThat().statusCode(HttpStatus.SC_METHOD_NOT_ALLOWED);
 
     }
+
     @Step("проверка что новый питомец добавился в базу сайта")
     public void checkAddNewPet() {
         given().pathParam("id", pet.getId())
