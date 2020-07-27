@@ -30,7 +30,7 @@ public class MyStepdefs {
     }
 
     @Тогда("проверяем что будет если отправить запрос без параметра")
-    public void checkRequestNoParametr() {
+    public void checkRequestNoParameter() {
         mainSteps.checkRequestNoParameter();
     }
 
@@ -52,5 +52,10 @@ public class MyStepdefs {
     @Тогда("проверяем добавление особенностей к питомцу {string}")
     public void checkAddTags(String tags) {
         mainSteps.checkAddTags(tags);
+    }
+
+    @Тогда("проверяем добавление различных статусов")
+    public void checkStatus() {
+        mainSteps.checkStatus();
     }
 }
